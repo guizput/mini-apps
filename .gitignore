@@ -1,0 +1,10 @@
+# ignore node_modules
+node_modules/
+# do not ignore dist folder
+!/dist
+# ignore files and subdirectories in dist
+/dist/*
+# keep _redirects
+!dist/_redirects
+# ignore parcel cache
+.parcel-cache/
