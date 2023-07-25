@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import AdventurePic from "./AdventurePic";
-import Loading from "./Loading";
+import AdventurePic from "./icons/AdventurePic";
+import Loading from "./icons/Loading";
 import Question from "./Question";
 
 const Capitals = () => {

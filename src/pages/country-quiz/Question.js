@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import IconSuccess from "./IconSuccess";
-import IconError from "./IconError";
-import IconNext from "./IconNext";
+import IconSuccess from "./icons/IconSuccess";
+import IconError from "./icons/IconError";
+import IconNext from "./icons/IconNext";
 import Results from "./Results";
 
 const Question = ({ countries }) => {
