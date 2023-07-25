@@ -5,9 +5,7 @@ import Question from "./Question";
 
 const Capitals = () => {
 	const [countries, setCountries] = useState([]);
-	const [count, setCount] = useState(0);
 	const [loading, setLoading] = useState(true);
-	const [random, setRandom] = useState(0);
 
 	useEffect(() => {
 		getData();
@@ -38,13 +36,7 @@ const Capitals = () => {
 							Country&nbsp;Quiz
 						</h1>
 						<AdventurePic />
-						<Question
-							countries={countries}
-							random={random}
-							setRandom={setRandom}
-							count={count}
-							setCount={setCount}
-						/>
+						<Question countries={countries} />
 					</div>
 				</div>
 			)}
