@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import IconSuccess from "./IconSuccess";
 import IconError from "./IconError";
 import IconNext from "./IconNext";
+import Results from "./Results";
 
 const Question = ({ countries }) => {
 	const [answers, setAnswers] = useState([]);
@@ -47,10 +48,16 @@ const Question = ({ countries }) => {
 	};
 
 	const nextQuestion = () => {
-		const num = Math.floor(Math.random() * 250);
 		setChecked(false);
 		setCount(count + 1);
-		setRandom(num);
+		setRandom(Math.floor(Math.random() * 250));
+	};
+
+	const reset = () => {
+		setChecked(false);
+		setCount(0);
+		setScore(0);
+		setRandom(Math.floor(Math.random() * 250));
 	};
 
 	return (
@@ -98,7 +105,10 @@ const Question = ({ countries }) => {
 										className="flex items-center justify-between rounded-lg border-2 border-gray-300 p-4 text-gray-600 hover:bg-gray-100"
 										onClick={() => nextQuestion()}
 									>
-										<span className="mr-2">Next</span> <IconNext />
+										<span className="mr-2">
+											{(count < 9 && "Next") || "Results"}
+										</span>{" "}
+										<IconNext />
 									</button>
 								</div>
 							)}
@@ -106,11 +116,7 @@ const Question = ({ countries }) => {
 					</div>
 				</div>
 			)}
-			{count >= 10 && (
-				<div>
-					Your score is {score}/{count}
-				</div>
-			)}
+			{count >= 10 && <Results score={score} reset={reset} />}
 		</>
 	);
 };
