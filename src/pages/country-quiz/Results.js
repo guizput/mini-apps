@@ -1,20 +1,19 @@
-const Results = ({ score, reset }) => {
+const Results = ({ score, count, reset }) => {
 	return (
 		<>
 			<div className="pb-10">
 				<h2 className="text-center text-4xl font-bold text-indigo-950">
 					Results
 				</h2>
-				<p className="mt-8 text-center">
-					You got{" "}
+				<p className="mt-8 text-center text-4xl">
 					<span
 						className={`${
-							score > 0 ? `text-emerald-600` : `text-red-600`
-						} text-2xl font-bold`}
+							score >= 5 ? `text-emerald-600` : `text-red-600`
+						} font-bold`}
 					>
 						{score}
-					</span>{" "}
-					correct answer{score > 1 ? "s" : ""}
+					</span>
+					/{count}
 				</p>
 				<div className="mt-8 flex items-center justify-center">
 					<button

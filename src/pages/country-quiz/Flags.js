@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import AdventurePic from "./icons/AdventurePic";
 import Loading from "./icons/Loading";
-import Question from "./capitals/Question";
+import Question from "./flags/Question";
 
-const Capitals = () => {
+const Flags = () => {
 	const [countries, setCountries] = useState([]);
 	const [loading, setLoading] = useState(true);
 
@@ -15,7 +15,7 @@ const Capitals = () => {
 		setLoading(true);
 		try {
 			const response = await fetch(
-				"https://restcountries.com/v3.1/all?fields=name,capital"
+				"https://restcountries.com/v3.1/all?fields=name,flags"
 			);
 			const data = await response.json();
 			setCountries(data);
@@ -44,4 +44,4 @@ const Capitals = () => {
 	);
 };
 
-export default Capitals;
+export default Flags;

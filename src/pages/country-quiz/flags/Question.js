@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import IconSuccess from "./icons/IconSuccess";
-import IconError from "./icons/IconError";
-import IconNext from "./icons/IconNext";
-import Results from "./Results";
+import IconSuccess from "../icons/IconSuccess";
+import IconError from "../icons/IconError";
+import IconNext from "../icons/IconNext";
+import Results from "../Results";
 
 const Question = ({ countries }) => {
 	const [answers, setAnswers] = useState([]);
