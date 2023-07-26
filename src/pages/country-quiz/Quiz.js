@@ -4,8 +4,8 @@ import Flags from "./Flags";
 const Quiz = () => {
 	return (
 		<>
-			<Capitals />
-			{/* <Flags /> */}
+			{/* <Capitals /> */}
+			<Flags />
 		</>
 	);
 };

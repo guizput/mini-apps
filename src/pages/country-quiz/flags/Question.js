@@ -64,8 +64,15 @@ const Question = ({ countries }) => {
 		<>
 			{count < 10 && (
 				<div>
-					<h2 className="text-xl font-semibold text-indigo-950">
-						<i>{countries[random].capital}</i> is the capital of
+					<div>
+						<img
+							className="w-24"
+							src={countries[random].flags.png}
+							alt="flag"
+						/>
+					</div>
+					<h2 className="mt-4 text-xl font-semibold text-indigo-950">
+						Which country does this flag belong to?
 					</h2>
 					<div className="mt-8">
 						<ul>
@@ -116,7 +123,7 @@ const Question = ({ countries }) => {
 					</div>
 				</div>
 			)}
-			{count >= 10 && <Results score={score} reset={reset} />}
+			{count >= 10 && <Results score={score} reset={reset} count={count} />}
 		</>
 	);
 };
