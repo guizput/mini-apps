@@ -30,7 +30,7 @@ const Capitals = () => {
 		<>
 			{loading && <Loading />}
 			{!loading && (
-				<div className="relative w-full max-w-md rounded-xl bg-white px-6 pb-4 pt-16">
+				<div className="relative top-20 w-full max-w-md rounded-xl bg-white px-6 pb-4 pt-16">
 					<div>
 						<h1 className="absolute -top-12 left-0 text-2xl font-bold uppercase text-white">
 							Country&nbsp;Quiz
